@@ -1,4 +1,6 @@
-# Context
+# Linkedin profile optimizer
+
+## Context
 
 I was trying to get more views on my [Linkedin profile](https://fr.linkedin.com/in/sharmashubham1) in order to bring more awernace around my path and my current company.
 
@@ -10,7 +12,7 @@ I personnaly, in 2 weeks grew from the 344 position in 1004 network to the 24th 
 
 So here I am sharing with you the trick ;)
 
-# How to make it work
+## How to make it work
 
 You can go to http://linkdinoptimiser.herokuapp.com
 
@@ -19,7 +21,7 @@ Or juste git clone this repo and run
 ```bash
 ```
 
-# How it is written
+## How it is written
 
 This project uses 
 
