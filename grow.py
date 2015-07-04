@@ -81,7 +81,7 @@ def Main():
 	emailElement = browser.find_element_by_id("session_key-login")
 	emailElement.send_keys(args.email)
 	passElement = browser.find_element_by_id("session_password-login")
-	passElement.send_keys("U9Z:[IS25'p*")
+	passElement.send_keys(args.password)
 	passElement.submit()
 
 	os.system('clear')
