@@ -64,7 +64,14 @@ def ViewBot(browser):
 
                 f = open("logs.txt","w")
 		#Output (Make option for this)
-		f.write("[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)")
+                pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
+
+                if type(pstring) == str:
+                        pstring = unicode(value, "utf-8", errors="ignore")
+                else:
+                        pstring = unicode(value)
+
+		f.write(pstring)
                 f.close()
 
 def Main():
