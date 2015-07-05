@@ -62,12 +62,13 @@ def ViewBot(browser):
 				print "I'm Lost Exiting"
 				break
 			
-		f = open("logs.txt","w")
-		#Output (Make option for this)
-		pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
-
-		f.write(pstring)
-		f.close()
+		# f = open("logs.txt","w")
+		# #Output (Make option for this)
+		# pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
+		
+		# f.write(pstring)
+		# f.close()
+		print count
 
 def Main():
 	parser = argparse.ArgumentParser()
