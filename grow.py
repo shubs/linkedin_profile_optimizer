@@ -66,7 +66,7 @@ def ViewBot(browser):
 		#Output (Make option for this)
 		# pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
 		
-		pstring = time.strftime("%A %d %B %Y %H:%M:%S") + "\t" + str(count) + "\n"
+		pstring = time.strftime("%A %d %B %Y %H:%M:%S") + "\t<br>" + str(count) + "\n"
 		f.write(pstring)
 		f.close()
 		print pstring
