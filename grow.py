@@ -1,4 +1,4 @@
-
+import time
 import argparse, os, time
 import urlparse, random
 from selenium import webdriver
@@ -34,7 +34,7 @@ def ViewBot(browser):
 	count = 0
 	while True:
 		#sleep to make sure everything loads, add random to make us look human.
-		sleeptime = random.uniform(3.5,6.9)
+		sleeptime = random.uniform(9,45.9)
 		print sleeptime
 		time.sleep(sleeptime)
 		page = BeautifulSoup(browser.page_source)
@@ -49,6 +49,10 @@ def ViewBot(browser):
 			person = pList.pop()
 			browser.get(person)
 			count += 1
+                        if (count % 13 == 0):
+                            sleeptimebix = random.uniform(154,499)
+                            print sleeptimebix
+                            time.sleep(sleeptimebix)
 		else: #otherwise find people via the job pages
 			jobs = getJobLinks(page)
 			if jobs:
@@ -62,13 +66,14 @@ def ViewBot(browser):
 				print "I'm Lost Exiting"
 				break
 			
-		# f = open("logs.txt","w")
-		# #Output (Make option for this)
+		f = open("logs.txt","a")
+		#Output (Make option for this)
 		# pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
 		
-		# f.write(pstring)
-		# f.close()
-		print count
+		pstring = time.strftime("%A %d %B %Y %H:%M:%S") + "\t ==> " + str(count) + "<hr>\n"
+		f.write(pstring)
+		f.close()
+		print pstring
 
 def Main():
 	parser = argparse.ArgumentParser()
