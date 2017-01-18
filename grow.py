@@ -33,7 +33,7 @@ def ViewBot(browser):
 	pList = []
 	count = 0
 	while True:
-		#sleep to make sure everything loads, add random to make us look human.
+		#sleep to make sure everything loads, add random to make us look human. This shit is important after the new update of linkedin
 		sleeptime = random.uniform(9,45.9)
 		print sleeptime
 		time.sleep(sleeptime)
@@ -70,7 +70,7 @@ def ViewBot(browser):
 		#Output (Make option for this)
 		# pstring = "[+] " + browser.title + " Visited! \n(" + str(count) + "/" + str(len(pList)) + ") Visited/Queue)"
 		
-		pstring = time.strftime("%A %d %B %Y %H:%M:%S") + "\t ==> " + str(count) + "<hr>\n"
+		pstring = time.strftime("%A %d %B %Y %H:%M:%S") + "\t ==> " + str(count) + "\t" + person +"<hr>\n"
 		f.write(pstring)
 		f.close()
 		print pstring
